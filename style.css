@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafafa;
+    font-family: 'Poppins', sans-serif;
+}
+
+div.container  {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: black;
+    color: white;
+    width: 26.625rem;
+    text-align: center;
+    padding: 3rem 4rem 4rem;
+    border-radius: .625rem;
+}
+
+.hide {
+    display: none;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input, button {
+    font-family: 'Poppins', sans-serif;
+}
+
+label {
+    margin-bottom: .5rem;
+    text-align: left;
+    font-size: .875rem;
+}
+
+input {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: .375rem;
+    background-color: #c4c4c4;
+    border: none;
+}
+
+input::placeholder {
+    color: #525252;
+}
+
+input:focus {
+    outline: .1875rem solid #00ffbf;
+}
+
+form button {
+    display: flex;
+    margin-top: 1rem;
+    background-color: #00ffbf;
+    padding: 1rem 0;
+    border-radius: .5rem;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+    transition: 400ms all;
+}
+
+button:hover {
+    background-color: #27C79E;
+}
+
+div.modal-wrapper {
+    position: absolute;
+    inset: 0;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-wrapper.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    border: #00ffbf 3px solid;
+    max-width: 22.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.modal button {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    transition: 400ms transform;
+}
+
+.modal button:hover {
+    transform: scale(1.1);
+}
+
+.alert-error.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.alert-error {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #F03E3E;
+    text-align: center;
+    color: white;
+    padding: .5rem 0;
+    font-weight: bold;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-1.875rem) .5s;
+}
